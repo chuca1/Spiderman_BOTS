@@ -12,6 +12,33 @@ function piumpium(){
        }
        telarañas[i].draw()
     }
+    telarañas.map(telaraña=>{
+        telaraña.draw()
+        if(vidaSpiderman2(telaraña)==true){
+            telarañas.splice(telaraña,1)
+        }
+    })
+}
+function crearTelaraña2(){
+    if(disparo2==true){
+    let telaraña2= new Telaraña2(spider2)
+    telarañas2.push(telaraña2)
+    disparo2=false
+    }
+}
+function piumpium2(){
+    for(let i=0;i<telarañas2.length;i++){
+       if(telarañas2[i].y < 0){
+           telarañas2.splice(i,1)
+       }
+       telarañas2[i].draw()
+    }
+    telarañas2.map(telaraña2=>{
+        telaraña2.draw()
+        if(vidaSpiderman(telaraña2)==true){
+            telarañas2.splice(telaraña2,1)
+        }
+    })
 }
 
 function crearBalas(){
@@ -40,8 +67,16 @@ function vidaSpiderman(balass){
     }
     if (spider.life<=0){
         clearInterval(interval)
-        game_O.style.display="initial"
-        game_O.style.position="absolute"
+
+    }
+}
+function vidaSpiderman2(balass){
+    if (spider2.isTouching(balass)){
+        spider2.life--
+        return true
+    }
+    if (spider2.life<=0){
+        clearInterval(interval)
     }
 }
 
@@ -78,7 +113,7 @@ function valorx(){
     })
   }
 
-  function malo_malo(tipo,variable){
+  function malo_malo(tipo){
     tipo.height=50
     tipo.width=50
     tipo.draw()
@@ -90,7 +125,10 @@ function valorx(){
     }
     if (tipo.life<=0){
         explosiones.draw(tipo)
-        gameOver(variable)
+        gameOver()
+        you_W.style.display="initial"
+        you_W.style.position="absolute"
+        return true
     }
     if(taki_taki<=60 && taki_taki>0){
         tipo.specialAttack()
@@ -103,8 +141,7 @@ function valorx(){
 }
     
   }
-function gameOver(variable){
+function gameOver(){
     clearInterval(interval)
-    variable=true
-    you_W.style.display="absolute"
+    return true
 }

@@ -103,7 +103,7 @@ class Spiderman{
           this.x -= 12
         }
     moveUp(){
-        if(this.y < 200)return
+        if(this.y < 70)return
             this.y -= 8
         }
     moveDown(){
@@ -118,6 +118,15 @@ class Spiderman{
     }
 
 }
+class Spiderman2 extends Spiderman{
+    constructor(imagen,balas){
+        super(imagen,balas)
+        this.y=50
+
+        
+    }
+
+}
 class Telaraña{
     constructor(spiderman){
         this.x=spiderman.x+4
@@ -127,6 +136,21 @@ class Telaraña{
     }
     move(){
         this.y-=8
+    }
+    draw(){
+        context.fillRect(this.x,this.y,this.width,this.width)
+        this.move()
+    }
+}
+class Telaraña2{
+    constructor(spiderman2){
+        this.x=spiderman2.x+4
+        this.y=spiderman2.y+spiderman2.height
+        this.width=10
+        this.height=10
+    }
+    move(){
+        this.y+=8
     }
     draw(){
         context.fillRect(this.x,this.y,this.width,this.width)

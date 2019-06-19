@@ -14,6 +14,7 @@ const kraven_V = new Kraven(edificios)
 const rhino_V = new Rhino(edificios)
 const goblin_V = new Goblin(edificios)
 const venom_V = new Venom(edificios)
+const spider2 = new Spiderman2(edificios)
 
 // selectores
 const inicio = document.querySelector("#inicio")
@@ -25,8 +26,13 @@ const rhino_button = document.querySelector("#rhino")
 const goblin_button = document.querySelector("#goblin")
 const venom_button = document.querySelector("#venom")
 const canvas_C=document.querySelector(".canvas")
-const you_W=document.querySelector("#next_phase")
+const you_W=document.querySelector(".next_phase")
 const game_O=document.querySelector(".disp")
+const keep_F=document.querySelector("#keep")
+const go=document.querySelector(".go")
+const vs=document.querySelector("#VS")
+const player1=document.querySelector(".player1")
+const player2=document.querySelector(".player2")
 
 
 //setters for the villans
@@ -46,7 +52,9 @@ venom_V.width=0
 //variables
 let balas=[]
 let telarañas=[]
+let telarañas2=[]
 let disparo=false
+let disparo2=false
 let animateHelper=0
 let interval
 let frames = 0

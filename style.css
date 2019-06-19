@@ -33,14 +33,6 @@ body{
     height: 40%;
     margin-top: 1%;
 }
-#next_phase{
-    display: none;
-    width: 40%;
-    height: 30%;    
-    background-color: aquamarine;
-    margin-left: 30%;
-    margin-top: 40%;
-}
 .canvas{
     display: none;
     flex-direction: row;
@@ -49,19 +41,75 @@ body{
     height: 100vh;
 
 }
-
+#electro{
+    visibility: hidden;
+}
+#kraven{
+    visibility: hidden;
+}
+#rhino{
+    visibility: hidden;
+}
+#goblin{
+    visibility: hidden;
+}
+#venom{
+    visibility: hidden;
+}
 
 .disp{
     display: none;
-    width: 40vw;
-    height: 15vh;
+    width: 40%;
+    height: 15%;
     background-color: aquamarine;
     margin-left: 30%;
 }
 .disp p {
     text-align: center;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 .disp button{
-   margin-left: 16vh;
+   margin-left: 39%;
+}
+.next_phase{
+    display: none;
+    width: 40%;
+    height: 15%;
+    background-color: aquamarine;
+    margin-left: 30%;
+}
+.next_phase p {
+    text-align: center;
+    margin-top: 5%;
+}
+.next_phase button{
+   margin-left: 39%;
+}
+.player1{
+    display: none;
+    width: 40%;
+    height: 15%;
+    background-color: aquamarine;
+    margin-left: 30%;
+}
+.player1 p {
+    text-align: center;
+    margin-top: 5%;
+}
+.player1 button{
+   margin-left: 39%;
+}
+.player2{
+    display: none;
+    width: 40%;
+    height: 15%;
+    background-color: aquamarine;
+    margin-left: 30%;
+}
+.player2 p {
+    text-align: center;
+    margin-top: 5%;
+}
+.player2 button{
+   margin-left: 39%;
 }
