@@ -8,29 +8,35 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="./Imagenes/logo_spiderman.jpg" id="logo">
-    <button id="start">Begin</button>
-    <div class="villanos">
-    <button id="vulture"></button>
-    <button id="electro"></button>
-    <button id="kraven"></button>
-    <button id="rhino"></button>
-    <button id="goblin"></button>
-    <button id="venom"></button>
+    <div id="todo">
+        <div id="inicio">
+            <img src="./Imagenes/logo_spiderman.jpg" id="logo">
+            <button id="start">Begin</button>
+        </div>
+        <div class="villanos">
+            <button id="vulture">Vulture</button>
+            <button id="electro">Electro</button>
+            <button id="kraven">Kraven</button>
+            <button id="rhino">Rhino</button>
+            <button id="goblin">Goblin</button>
+            <button id="venom">Venom</button>
+        </div>
+        <div class="disp" id="game_over">
+            <p>You lost but spiderman never quits</p>
+            <button>
+                Keep Fighting
+            </button>
+        </div>
+        <div id="next_phase">
+            <p>He is down but the fight is not over, another tower is being attacked</p>
+            <button>
+                Lets go
+            </button>
+        </div>
+        <div class="canvas">
+            <canvas id="canvas" width="300px" height="650px"></canvas>
+        </div>
     </div>
-     <div id="game_over">
-         You lost but spiderman never quits
-      <button>
-        Keep Fighting
-      </button>
-     </div>
-     <div id="next_phase">
-            He is down but the fight is not over, another tower is being attacked
-         <button>
-           Lets go
-         </button>
-    </div>
-    <canvas id="canvas" width="300px" height="650px"></canvas>
     <script src="./clases.js"></script>
     <script src="./variables.js"></script>
     <script src="./helpers.js"></script>

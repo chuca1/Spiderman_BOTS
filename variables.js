@@ -16,8 +16,7 @@ const goblin_V = new Goblin(edificios)
 const venom_V = new Venom(edificios)
 
 // selectores
-const start = document.querySelector("#start")
-const imagen_logo = document.querySelector("#logo")
+const inicio = document.querySelector("#inicio")
 const menu_villanos = document.querySelector(".villanos")
 const vulture_button = document.querySelector("#vulture")
 const electro_button = document.querySelector("#electro")
@@ -25,6 +24,9 @@ const kraven_button = document.querySelector("#kraven")
 const rhino_button = document.querySelector("#rhino")
 const goblin_button = document.querySelector("#goblin")
 const venom_button = document.querySelector("#venom")
+const canvas_C=document.querySelector(".canvas")
+const you_W=document.querySelector("#next_phase")
+const game_O=document.querySelector(".disp")
 
 
 //setters for the villans

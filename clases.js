@@ -154,8 +154,8 @@ class Villanos{
         this.x=canvas.width/2
         this.width=60
         this.height=90
-        this.vulture= new Image()
-        this.vulture.src="./Imagenes/vulture.png"
+        this.img= new Image()
+        this.img.src="./Imagenes/vulture.png"
         this.imagen=imagen
         this.y=0
         this.life=20
@@ -172,7 +172,7 @@ class Villanos{
     }
     draw(){
         if(this.imagen.y <= 1.5 && this.imagen.y >=-1){
-            context.drawImage(this.vulture,this.x,this.y,this.width,this.height)
+            context.drawImage(this.img,this.x,this.y,this.width,this.height)
             this.move()
         }
         
@@ -233,7 +233,7 @@ class Obstacle {
 class Vulture extends Villanos{
     constructor(imagen,telarañas){
         super(imagen,telarañas)
-        this.imagen.src="./Imagenes/vulture.png"
+        this.img.src="./Imagenes/vulture.png"
     }
     specialAttack(){
         context.fillRect(this.x+ this.width/2,this.y,10,canvas.height)
@@ -243,16 +243,16 @@ class Vulture extends Villanos{
 class Electro extends Villanos{
     constructor(imagen,telarañas){
         super(imagen,telarañas)
-        this.imagen.src="./Imagenes/eltectro.png"
+        this.img.src="./Imagenes/eltectro.png"
     }
     specialAttack(){
-        context.fillRect(0 ,0 ,canva.width,canvas.height/3)
+        context.fillRect(0 ,300 ,canvas.width,canvas.height/5)
     }
 }
 class Kraven extends Villanos{
     constructor(imagen,telarañas){
         super(imagen,telarañas)
-        this.imagen.src="./Imagenes/kraven.png"
+        this.img.src="./Imagenes/kraven.png"
     }
     specialAttack(){
         context.fillRect(0,400,canvas.width,30)
@@ -262,7 +262,7 @@ class Kraven extends Villanos{
 class Rhino extends Villanos{
     constructor(imagen,telarañas){
         super(imagen,telarañas)
-        this.imagen.src="./Imagenes/rhino.png"
+        this.img.src="./Imagenes/rhino.png"
     }
     specialAttack(){
        this.x=spider.x
@@ -272,7 +272,7 @@ class Rhino extends Villanos{
 class Goblin extends Villanos{
     constructor(imagen,telarañas){
         super(imagen,telarañas)
-        this.imagen.src="./Imagenes/goblin.png"
+        this.img.src="./Imagenes/goblin.png"
     }
     specialAttack(){
       
@@ -282,11 +282,11 @@ class Goblin extends Villanos{
 class Venom extends Villanos{
     constructor(imagen,telarañas){
         super(imagen,telarañas)
-        this.imagen.src="./Imagenes/Venom.png"
+        this.img.src="./Imagenes/Venom.png"
     }
     specialAttack(){
-        context.fillRect( this.width/4,0,10,canvas.height)
-        context.fillRect( this.width/2,0,10,canvas.height)
-        context.fillRect((this.width/4)*3,0,10,canvas.height)
+        context.fillRect( canvas.width/8,0,20,canvas.height)
+        context.fillRect( canvas.width/4,0,20,canvas.height)
+        context.fillRect(canvas.width/22,0,10,canvas.height)
     }
 }

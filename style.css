@@ -1,60 +1,67 @@
 body{
-    position: relative;
-    background-color: red;
+    margin:0;
+
+}
+#todo{
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    background-image: url("./Imagenes/fondo.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
 }
-#logo{
-    position: relative;
-    width: 40%;
-    height: 40%;
-    margin-left: 33%;
+
+#inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-#start{
-    position: relative;
-    width: 15%;
-    height: 10%;
-    background-color: blue;
-    margin-left: 45%;
+#inicio img{
+    width: 40vw;
+    height: 40vw;
 }
 .villanos{
-    display: flex;
-    width: 50%;
-    height: 100%;
+    display: none;
     flex-direction: column;
-    visibility: hidden;
-    margin-left: 30%;
-}
-canvas{
-    position: relative;
-    visibility: hidden;
-    z-index: 0;
+    align-items: center;
+    height: 70vh;
+    justify-content: space-around;
 }
 .villanos button{
-    width: 100%;
+    width: 40%;
+    height: 40%;
+    margin-top: 1%;
+}
+#next_phase{
+    display: none;
+    width: 40%;
+    height: 30%;    
+    background-color: aquamarine;
+    margin-left: 30%;
+    margin-top: 40%;
+}
+.canvas{
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+
+.disp{
+    display: none;
+    width: 40vw;
     height: 15vh;
+    background-color: aquamarine;
+    margin-left: 30%;
 }
-#electro{
-    visibility: hidden;
+.disp p {
+    text-align: center;
+    margin-top: 10%;
 }
-#kraven{
-    visibility: hidden;
-}
-#rhino{
-    visibility: hidden;
-}
-#goblin{
-    visibility: hidden;
-}
-#venom{
-    visibility: hidden;                                         
-}
-.game_over{
-    position: absolute;
-    width: 75%;
-    height: 60%;
-    background-color: black;
-    color: red;
-    margin-top: 50%;
-    margin-left: 40%;
-    z-index: 1;
+.disp button{
+   margin-left: 16vh;
 }

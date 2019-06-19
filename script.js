@@ -1,7 +1,6 @@
 vulture_button.onclick=(e)=> {
-      menu_villanos.style.height="0vh"
-      menu_villanos.style.width="0vw"
-      canvas.style.visibility="visible"
+      menu_villanos.style.display="none"
+      canvas_C.style.display="flex"
       startGame();
    
   
@@ -75,7 +74,7 @@ kraven_button.onclick=(e)=> {
     crearTelaraña()
     drawBalas()
     if(edificios.y>0){
-      malo_malo(rhino_V,unlock_rhino)
+      malo_malo(kraven_V,unlock_rhino)
     }
     drawObstacles()
     piumpium()

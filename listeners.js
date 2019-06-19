@@ -1,3 +1,5 @@
+
+//Move Spidermn
 addEventListener("keydown",(e)=>{
     if (e.keyCode === 39){
       spider.moveRight()
@@ -12,23 +14,17 @@ addEventListener("keydown",(e)=>{
         spider.moveDown()
       }
   })
-  addEventListener("keydown",event=>{
+  addEventListener("keyup",event=>{
     if(event.keyCode === 32){
         disparo=true
     }
 })
+
+
+//Start
 start.onclick=(e)=>{
-    if  (imagen_logo.style.visibility == "visible" ||imagen_logo.style.visibility == "" ){
-            imagen_logo.style.visibility = "hidden"; 
-            imagen_logo.style.height="0vh"
-            imagen_logo.style.height="0wh"// or
-        
+    if  (inicio.style.display="flex"){
+            inicio.style.display="none"
         }
-    if  (start.style.visibility == "visible" ||start.style.visibility == "" ){
-        start.style.visibility = "hidden";
-        start.style.height="0vh" 
-        start.style.width="0wh"// or
-        
-    }
-    menu_villanos.style.visibility="visible"
+    menu_villanos.style.display="flex"
 }

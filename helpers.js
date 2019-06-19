@@ -40,6 +40,8 @@ function vidaSpiderman(balass){
     }
     if (spider.life<=0){
         clearInterval(interval)
+        game_O.style.display="initial"
+        game_O.style.position="absolute"
     }
 }
 
@@ -90,12 +92,19 @@ function valorx(){
         explosiones.draw(tipo)
         gameOver(variable)
     }
-    if(taki_taki<=60){
-        
+    if(taki_taki<=60 && taki_taki>0){
+        tipo.specialAttack()
+        taki_taki-=1
     }
+    if(frames% 200==0){
+        if (taki_taki===0){
+        taki_taki=60
+        }
+}
     
   }
 function gameOver(variable){
     clearInterval(interval)
     variable=true
+    you_W.style.display="absolute"
 }
