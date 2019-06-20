@@ -63,7 +63,7 @@ class Spiderman{
         this.y=550
         this.width=50
         this.height=50
-        this.life=10
+        this.life=30
         this.spiderR =  new Image()
         this.spiderM =  new Image()
         this.spiderL =  new Image()
@@ -161,14 +161,16 @@ class Balas{
     constructor(){
         this.x=Math.floor(Math.random() * (230 - +40)) + +40
         this.y=0
-        this.width=10
-        this.height=10
+        this.width=20
+        this.height=20
+        this.img=new Image()
+        this.img.src="./Imagenes/ladrillo.png"
     }
     move(){
         this.y+=5
     }
     draw(){
-        context.fillRect(this.x,this.y,this.width,this.width)
+        context.drawImage(this.img,this.x,this.y,this.width,this.width)
         this.move()
     }
 }
@@ -215,10 +217,12 @@ class Obstacle {
       this.x = x
       this.y = 0
       this.width= w
-      this.height = 15
+      this.height = 40
+      this.img=new Image()
+      this.img.src="./Imagenes/obstaculo.png"
     }
     draw() {
-      context.fillRect(this.x, this.y, this.width, 15)
+      context.drawImage(this.img,this.x, this.y, this.width, 40)
       this.y++
     }
   }
@@ -258,19 +262,12 @@ class Vulture extends Villanos{
     constructor(imagen,telarañas){
         super(imagen,telarañas)
         this.img.src="./Imagenes/vulture.png"
-    }
-    specialAttack(){
-        context.fillRect(this.x+ this.width/2,this.y,10,canvas.height)
-    }
-    
+    }   
 }
 class Electro extends Villanos{
     constructor(imagen,telarañas){
         super(imagen,telarañas)
         this.img.src="./Imagenes/eltectro.png"
-    }
-    specialAttack(){
-        context.fillRect(0 ,300 ,canvas.width,canvas.height/5)
     }
 }
 class Kraven extends Villanos{
@@ -278,19 +275,11 @@ class Kraven extends Villanos{
         super(imagen,telarañas)
         this.img.src="./Imagenes/kraven.png"
     }
-    specialAttack(){
-        context.fillRect(0,400,canvas.width,30)
-        context.fillRect(0,600,canvas.width,30)
-    }
 }
 class Rhino extends Villanos{
     constructor(imagen,telarañas){
         super(imagen,telarañas)
         this.img.src="./Imagenes/rhino.png"
-    }
-    specialAttack(){
-       this.x=spider.x
-       this.y=spider.y
     }
 }
 class Goblin extends Villanos{
@@ -308,9 +297,74 @@ class Venom extends Villanos{
         super(imagen,telarañas)
         this.img.src="./Imagenes/Venom.png"
     }
+}
+class Poder_malo{
+    constructor(tipo){
+        this.tipo=tipo
+        if(tipo==vuture_V){
+            this.x=vuture_V.x+ vuture_V.width/2
+            this.y=vuture_V.y+vuture_V.height
+            this.width=10
+            this.height=canvas.height
+        }
+        else if(tipo==electro_V){
+            this.x=0
+            this.y=200
+            this.width=canvas.width
+            this.height=canvas.height/4
+        }
+        else if(tipo==kraven_V){
+            this.x=0
+            this.y=400
+            this.y1=400
+            this.width=canvas.width
+            this.height=30
+        }
+        else if(tipo==rhino_V){
+            this.x=0
+            this.y=600
+            this.width=canvas.width
+            this.height=canvas.height/4
+        }
+        else if(tipo==goblin_V){
+            this.x= Math.floor(Math.random() * 130)
+            this.y=Math.floor(Math.random() * 110)
+            this.width=Math.floor(Math.random() * 110)
+            this.height=Math.floor(Math.random() * 110)
+        }
+        else if(tipo==venom_V){
+            this.x=canvas.width/8
+            this.x1=canvas.width/4
+            this.x2=canvas.width/22
+            this.y=0
+            this.width=20
+            this.height=canvas.height
+        }
+    }
     specialAttack(){
-        context.fillRect( canvas.width/8,0,20,canvas.height)
-        context.fillRect( canvas.width/4,0,20,canvas.height)
-        context.fillRect(canvas.width/22,0,10,canvas.height)
+        if(this.tipo==vuture_V){
+            context.fillRect(this.x,this.y,this.width,this.height)
+        }
+        else if(this.tipo==electro_V){
+            context.fillRect( this.x,this.y ,this.width,this.height)
+        }
+        else if(this.tipo==kraven_V){
+                context.fillRect(this.x,this.y,this.width,this.height)
+                context.fillRect(this.x,this.y1,this.width,this.height)
+        }
+        else if(this.tipo==rhino_V){
+            context.fillRect( this.x,this.y ,this.width,this.height)
+        }
+        else if(this.tipo==goblin_V){
+            context.fillRect(this.x,this.y,this.width,this.height)
+        }
+        else if(this.tipo==venom_V){
+            context.fillRect(this.x,this.y,this.width,this.height )
+            context.fillRect( this.x1,this.y,this.width,this.height)
+            context.fillRect(this.x2,this.y,this.width,this.height)
+        }
+
+
+
     }
 }

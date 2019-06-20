@@ -17,9 +17,13 @@ vulture_button.onclick=(e)=> {
       }
       drawObstacles()
       piumpium()
-      vida.width=spider.life*30
+      vida.width=spider.life*10
       vida.draw()
-      
+      if (spider.life<=0){
+        clearInterval(interval)
+        game_O.style.display="initial"
+        game_O.style.position="absolute"
+      }
     }
     function startGame() {
         interval = setInterval(update,1000/60)
@@ -45,8 +49,13 @@ electro_button.onclick=(e)=> {
     }
     drawObstacles()
     piumpium()
-    vida.width=spider.life*30
+    vida.width=spider.life*10
     vida.draw()
+    if (spider.life<=0){
+      clearInterval(interval)
+      game_O.style.display="initial"
+      game_O.style.position="absolute"
+    }
     
   }
   function startGame() {
@@ -74,8 +83,13 @@ kraven_button.onclick=(e)=> {
     }
     drawObstacles()
     piumpium()
-    vida.width=spider.life*30
+    vida.width=spider.life*10
     vida.draw()
+    if (spider.life<=0){
+      clearInterval(interval)
+      game_O.style.display="initial"
+      game_O.style.position="absolute"
+    }
     
   }
   function startGame() {
@@ -102,8 +116,13 @@ rhino_button.onclick=(e)=> {
     }
     drawObstacles()
     piumpium()
-    vida.width=spider.life*30
+    vida.width=spider.life*10
     vida.draw()
+    if (spider.life<=0){
+      clearInterval(interval)
+      game_O.style.display="initial"
+      game_O.style.position="absolute"
+    }
     
   }
   function startGame() {
@@ -131,9 +150,13 @@ goblin_button.onclick=(e)=> {
     }
     drawObstacles()
     piumpium()
-    vida.width=spider.life*30
+    vida.width=spider.life*10
     vida.draw()
-    
+    if (spider.life<=0){
+      clearInterval(interval)
+      game_O.style.display="initial"
+      game_O.style.position="absolute"
+    }
   }
   function startGame() {
       
@@ -160,7 +183,7 @@ venom_button.onclick=(e)=> {
     }
     drawObstacles()
     piumpium()
-    vida.width=spider.life*30
+    vida.width=spider.life*10
     vida.draw()
     
   }
@@ -182,6 +205,8 @@ vs.onclick=(e)=> {
 
 
 function update(){
+  spider2.width=50
+  spider2.height=50
   frames++
   context.clearRect(0, 0, canvas.width, canvas.height);
   edificios.draw()

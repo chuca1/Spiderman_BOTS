@@ -131,14 +131,21 @@ function valorx(){
         return true
     }
     if(taki_taki<=60 && taki_taki>0){
-        tipo.specialAttack()
+        poder_malo.specialAttack()
         taki_taki-=1
+        if(spider.isTouching(poder_malo)){
+            spider.life-=3
+            poder_malo=""
+            taki_taki=0
+        }
+    }
+    else{
+        poder_malo=""
     }
     if(frames% 200==0){
-        if (taki_taki===0){
         taki_taki=60
-        }
-}
+        poder_malo= new Poder_malo(tipo)  
+    }
     
   }
 function gameOver(){

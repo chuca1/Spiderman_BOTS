@@ -48,7 +48,7 @@ keep_F.onclick=(e)=>{
     menu_villanos.style.display="flex"
     canvas_C.style.display="none"
     game_O.style.display="none"
-    spider.life=10
+    spider.life=30
     vuture_V.life=20
     electro_V.life=22
     kraven_V.life=25
@@ -64,27 +64,90 @@ go.onclick=(e)=>{
     if(unlock_electro==true){
         electro_button.style.visibility="visible"
     }
+    if(unlock_kraven==true){
+        kraven_button.style.visibility="visible"
+    }
+    if(unlock_rhino==true){
+        rhino_button.style.visibility="visible"
+    }
+    if(unlock_goblin==true){
+        goblin_button.style.visibility="visible"
+    }
+    if(unlock_venom==true){
+        venom_button.style.visibility="visible"
+    }
     menu_villanos.style.display="flex"
     canvas_C.style.display="none"
     you_W.style.display="none"
-    spider.life=10
+    spider.life=30
     vuture_V.life=20
     electro_V.life=22
     kraven_V.life=25
     rhino_V.life=27
     goblin_V.life=28
     venom_V.life=30
-    spider2.life=10
+    spider2.life=30
     edificios.y=-canvas.height
     balas.splice(0,balas.length)
     telarañas.splice(0,telarañas.length)
     obstacles.splice(0,obstacles.length)
     player1.style.display="none"
     player2.style.display="none"
-    
+    game_O.style.display="none"
+    telarañas.splice(0,telarañas.length+1)
+    telarañas2.splice(0,telarañas2.length+1)
+   
+}
+go1.onclick=(e)=>{
+    if(unlock_electro==true){
+        electro_button.style.visibility="visible"
+    }
+    menu_villanos.style.display="flex"
+    canvas_C.style.display="none"
+    you_W.style.display="none"
+    spider.life=30
+    vuture_V.life=20
+    electro_V.life=22
+    kraven_V.life=25
+    rhino_V.life=27
+    goblin_V.life=28
+    venom_V.life=30
+    spider2.life=30
+    edificios.y=-canvas.height
+    balas.splice(0,balas.length)
+    telarañas.splice(0,telarañas.length)
+    obstacles.splice(0,obstacles.length)
+    player1.style.display="none"
+    player2.style.display="none"
     game_O.style.display="none"
     telarañas.splice(0,telarañas.length+1)
     telarañas2.splice(0,telarañas2.length+1)
    
 }
 
+go2.onclick=(e)=>{
+    if(unlock_electro==true){
+        electro_button.style.visibility="visible"
+    }
+    menu_villanos.style.display="flex"
+    canvas_C.style.display="none"
+    you_W.style.display="none"
+    spider.life=30
+    vuture_V.life=20
+    electro_V.life=22
+    kraven_V.life=25
+    rhino_V.life=27
+    goblin_V.life=28
+    venom_V.life=30
+    spider2.life=30
+    edificios.y=-canvas.height
+    balas.splice(0,balas.length)
+    telarañas.splice(0,telarañas.length)
+    obstacles.splice(0,obstacles.length)
+    player1.style.display="none"
+    player2.style.display="none"
+    game_O.style.display="none"
+    telarañas.splice(0,telarañas.length+1)
+    telarañas2.splice(0,telarañas2.length+1)
+   
+}

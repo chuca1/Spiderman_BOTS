@@ -29,7 +29,9 @@ const canvas_C=document.querySelector(".canvas")
 const you_W=document.querySelector(".next_phase")
 const game_O=document.querySelector(".disp")
 const keep_F=document.querySelector("#keep")
-const go=document.querySelector(".go")
+const go=document.querySelector("#go")
+const go1=document.querySelector("#go1")
+const go2=document.querySelector("#go2")
 const vs=document.querySelector("#VS")
 const player1=document.querySelector(".player1")
 const player2=document.querySelector(".player2")
@@ -48,7 +50,8 @@ goblin_V.height=0
 goblin_V.width=0
 venom_V.height=0
 venom_V.width=0
-
+spider2.width=0
+spider2.height=0
 //variables
 let balas=[]
 let telarañas=[]
@@ -59,8 +62,8 @@ let animateHelper=0
 let interval
 let frames = 0
 let obstacles=[]
-let taki_taki=60
-
+let taki_taki=0
+let poder_malo
 
 //unlocables
 let unlock_electro=false
