@@ -122,6 +122,8 @@ class Spiderman2 extends Spiderman{
     constructor(imagen,balas){
         super(imagen,balas)
         this.y=50
+        this.width=0
+        this.height=0
 
         
     }
@@ -233,13 +235,13 @@ class Obstacle {
       this.width=100
       this.height=100
       this.img = new Image()
-      this.img.src="./Imagenes/explosion.jpg"
+      this.img.src="./Imagenes/explosion.png"
       }
-      move(){
-          this.x+=Math.floor(Math.random()*2.99) - 1
-      }
+      
       draw(){
           context.drawImage(this.img,this.x,this.y,this.height,this.width)
+          context.drawImage(this.img,this.x-villano-width,this.y,this.height,this.width)
+          context.drawImage(this.img,this.x+villano-width,this.y,this.height,this.width)
       }
   }
   class LifeBar{
