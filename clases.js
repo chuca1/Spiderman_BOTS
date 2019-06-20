@@ -124,7 +124,9 @@ class Spiderman2 extends Spiderman{
         this.y=50
         this.width=0
         this.height=0
-
+        this.spiderL.src="./Imagenes/izquierda2.png"
+        this.spiderM.src ="./Imagenes/media2.png"
+        this.spiderL.src ="./Imagenes/izquierda2.png"
         
     }
 
