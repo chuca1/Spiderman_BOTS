@@ -42,21 +42,28 @@ body{
 
 }
 #electro{
+    background-image: url("./Imagenes/electro_button.png");
     visibility: hidden;
 }
 #kraven{
+    background-image: url("./Imagenes/kraven_button.png");
     visibility: hidden;
 }
 #rhino{
+    background-image: url("./Imagenes/rhino_button.png");
     visibility: hidden;
 }
 #goblin{
+    background-image: url("./Imagenes/Goblin_button.png");
     visibility: hidden;
 }
 #venom{
+    background-image: url("./Imagenes/venom_button.png");
     visibility: hidden;
 }
-
+#vulture{
+    background-image: url("./Imagenes/vulture_button.png")
+}
 .disp{
     display: none;
     width: 40%;
@@ -112,4 +119,26 @@ body{
 }
 .player2 button{
    margin-left: 39%;
+}
+#control2{
+    position: absolute;
+    background-color: crimson;
+    height: 30%;
+    width: 15%;
+    margin-left: 74%;
+}
+#control2 img{
+    height: 100%;
+    width: 100%;
+}
+#control1{
+    position: absolute;
+    background-color: crimson;
+    height: 30%;
+    width: 15%;
+    margin-left: 10%;
+}
+#control1 img{
+    height: 100%;
+    width: 100%;
 }

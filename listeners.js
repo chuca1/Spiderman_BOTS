@@ -2,36 +2,36 @@
 //Move Spidermn
 addEventListener("keydown",(e)=>{
     if (e.keyCode === 39){
-      spider.moveRight()
+      spider2.moveRight()
     }
     else if (e.keyCode === 37){
-      spider.moveLeft()
+      spider2.moveLeft()
     }
     else if (e.keyCode === 38){
-        spider.moveUp()
+        spider2.moveUp()
       }
     else if (e.keyCode === 40){
-        spider.moveDown()
+        spider2.moveDown()
       }
     else if (e.keyCode === 65){
-        spider2.moveLeft()
+        spider.moveLeft()
       }
     else if (e.keyCode === 68){
-          spider2.moveRight()
+          spider.moveRight()
       }
     else if (e.keyCode === 87){
-          spider2.moveUp()
+          spider.moveUp()
         }
     else if (e.keyCode === 83){
-          spider2.moveDown()
+          spider.moveDown()
         }
   })
   addEventListener("keyup",event=>{
     if(event.keyCode === 13){
-        disparo=true
+        disparo2=true
     }
     else if(event.keyCode === 32){
-        disparo2=true
+        disparo=true
     }
 })
 
