@@ -87,6 +87,8 @@ go.onclick=(e)=>{
     goblin_V.life=28
     venom_V.life=30
     spider2.life=30
+    spider2.height=0
+    spider2.width=0;
     edificios.y=-canvas.height
     balas.splice(0,balas.length)
     telarañas.splice(0,telarañas.length)
