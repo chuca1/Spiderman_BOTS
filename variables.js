@@ -18,6 +18,7 @@ const spider2 = new Spiderman2(edificios)
 const audio = new Audio("./song.mp3");
 const vida2 = new LifeBar2(spider2)
 
+
 // selectores
 const inicio = document.querySelector("#inicio")
 const menu_villanos = document.querySelector(".villanos")
@@ -38,6 +39,7 @@ const vs=document.querySelector("#VS")
 const player1=document.querySelector(".player1")
 const player2=document.querySelector(".player2")
 const win=document.querySelector(".win")
+const winb=document.querySelector(".winb")
 
 
 //setters for the villans
