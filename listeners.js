@@ -117,6 +117,10 @@ go1.onclick=(e)=>{
     canvas_C.style.display="none"
     you_W.style.display="none"
     spider.life=30
+    spider2.y=50
+    spider.y=550
+    spider2.x=125
+    spider.x=125
     vuture_V.life=20
     electro_V.life=22
     kraven_V.life=25
@@ -135,6 +139,8 @@ go1.onclick=(e)=>{
     game_O.style.display="none"
     telarañas.splice(0,telarañas.length+1)
     telarañas2.splice(0,telarañas2.length+1)
+    telarañas.splice(0,telarañas.length)
+    telarañas2.splice(0,telarañas2.length)
    
 }
 
@@ -154,9 +160,15 @@ go2.onclick=(e)=>{
     spider2.life=30
     spider2.width=0
     spider2.height=0
+    spider.life=30
+    spider2.y=50
+    spider.y=550
+    spider2.x=125
+    spider.x=125
+    telarañas.splice(0,telarañas.length)
+    telarañas2.splice(0,telarañas2.length)
     edificios.y=-canvas.height
     balas.splice(0,balas.length)
-    telarañas.splice(0,telarañas.length)
     obstacles.splice(0,obstacles.length)
     player1.style.display="none"
     player2.style.display="none"
@@ -184,6 +196,7 @@ winb.onclick=(e)=>{
     spider2.life=30
     spider2.width=0
     spider2.height=0
+    
     edificios.y=-canvas.height
     balas.splice(0,balas.length)
     telarañas.splice(0,telarañas.length)
