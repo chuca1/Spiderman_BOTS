@@ -332,7 +332,7 @@ class Goblin extends Villanos{
 class Venom extends Villanos{
     constructor(imagen,telarañas){
         super(imagen,telarañas)
-        this.img.src="./Imagenes/Venom.png"
+        this.img.src="./Imagenes/venom.png"
     }
 }
 class Poder_malo{
