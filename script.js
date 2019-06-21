@@ -26,7 +26,7 @@ vulture_button.onclick=(e)=> {
       }
     }
     function startGame() {
-        interval = setInterval(update,1000/60)
+        interval = setInterval(update,1000/90)
     }
   
   }
@@ -59,7 +59,7 @@ electro_button.onclick=(e)=> {
     
   }
   function startGame() {
-      interval = setInterval(update,1000/60)
+      interval = setInterval(update,1000/90)
   }
 
 
@@ -93,7 +93,7 @@ kraven_button.onclick=(e)=> {
     
   }
   function startGame() {
-      interval = setInterval(update,1000/60)
+      interval = setInterval(update,1000/90)
   }
 
 }
@@ -127,7 +127,7 @@ rhino_button.onclick=(e)=> {
   }
   function startGame() {
       
-      interval = setInterval(update,1000/60)
+      interval = setInterval(update,1000/90)
   }
 
 }
@@ -160,7 +160,7 @@ goblin_button.onclick=(e)=> {
   }
   function startGame() {
       
-      interval = setInterval(update,1000/60)
+      interval = setInterval(update,1000/90)
   }
 
 }
@@ -194,7 +194,7 @@ venom_button.onclick=(e)=> {
   }
   function startGame() {
       
-      interval = setInterval(update,1000/60)
+      interval = setInterval(update,1000/90)
   }
 
 }
@@ -217,6 +217,10 @@ function update(){
   spider2.draw()
   crearTelaraña2()
   piumpium2()
+  vida.width=spider.life*10
+  vida.draw()
+  vida2.width=spider2.life*10
+  vida2.draw()
   if(spider2.life<=0){
     gameOver()
     player1.style.display="initial"
@@ -231,7 +235,7 @@ function update(){
 }
 function startGame() {
     
-    interval = setInterval(update,1000/60)
+    interval = setInterval(update,1000/90)
 }
 
 }

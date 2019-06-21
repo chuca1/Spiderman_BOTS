@@ -6,7 +6,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url("./Imagenes/fondo.jpg");
+    background-image: url("https://thumbs.gfycat.com/DefenselessNeighboringDartfrog-size_restricted.gif");
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -20,6 +20,13 @@ body{
 #inicio img{
     width: 40vw;
     height: 40vw;
+}
+#inicio button{
+    width: 6vw;
+    height: 6vw;
+    background-image: url("./Imagenes/button.png");
+    background-size: cover;
+    border-radius: 3vw;
 }
 .villanos{
     display: none;
@@ -44,25 +51,31 @@ body{
 #electro{
     background-image: url("./Imagenes/electro_button.png");
     visibility: hidden;
+    background-size: cover;
 }
 #kraven{
     background-image: url("./Imagenes/kraven_button.png");
     visibility: hidden;
+    background-size: cover;
 }
 #rhino{
     background-image: url("./Imagenes/rhino_button.png");
     visibility: hidden;
+    background-size: cover;
 }
 #goblin{
     background-image: url("./Imagenes/Goblin_button.png");
     visibility: hidden;
+    background-size: cover;
 }
 #venom{
     background-image: url("./Imagenes/venom_button.png");
     visibility: hidden;
+    background-size: cover;
 }
 #vulture{
-    background-image: url("./Imagenes/vulture_button.png")
+    background-image: url("./Imagenes/vulture_button.png");
+    background-size: cover;
 }
 .disp{
     display: none;
@@ -141,4 +154,8 @@ body{
 #control1 img{
     height: 100%;
     width: 100%;
+}
+#VS{
+    background-image: url("./Imagenes/vs_button.png");
+    background-size: cover;
 }

@@ -15,6 +15,8 @@ const rhino_V = new Rhino(edificios)
 const goblin_V = new Goblin(edificios)
 const venom_V = new Venom(edificios)
 const spider2 = new Spiderman2(edificios)
+const audio = new Audio("./song.mp3");
+const vida2 = new LifeBar2(spider2)
 
 // selectores
 const inicio = document.querySelector("#inicio")

@@ -40,6 +40,7 @@ addEventListener("keydown",(e)=>{
 start.onclick=(e)=>{
     if  (inicio.style.display="flex"){
             inicio.style.display="none"
+            audio.play()
         }
     menu_villanos.style.display="flex"
 }
