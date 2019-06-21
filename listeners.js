@@ -25,6 +25,14 @@ addEventListener("keydown",(e)=>{
     else if (e.keyCode === 83){
           spider.moveDown()
         }
+    else if (e.keyCode === 71){
+       electro_button.style.visibility="visible"
+       kraven_button.style.visibility="visible"
+       venom_button.style.visibility="visible"
+       goblin_button.style.visibility="visible"
+       rhino_button.style.visibility="visible"
+
+        }
   })
   addEventListener("keyup",event=>{
     if(event.keyCode === 13){

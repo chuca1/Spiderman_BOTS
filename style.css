@@ -80,58 +80,94 @@ body{
 .disp{
     display: none;
     width: 40%;
-    height: 15%;
-    background-color: aquamarine;
+    height: 20%;
+    background-image: url("./Imagenes/pop.png");
+    background-size: 100%;
+    background-position-y: 15%;
+    background-repeat: no-repeat;
     margin-left: 30%;
 }
 .disp p {
     text-align: center;
     margin-top: 5%;
+    font-size: 3vh;
 }
 .disp button{
-   margin-left: 39%;
+    margin-left: 47%;
+    width: 3vw;
+    height: 3vw;
+    background-image: url("./Imagenes/button.png");
+    background-size: cover;
+    border-radius: 3vw;
 }
 .next_phase{
     display: none;
-    width: 40%;
-    height: 15%;
-    background-color: aquamarine;
-    margin-left: 30%;
+    width: 60%;
+    height: 20%;
+    background-image: url("./Imagenes/pop.png");
+    background-size: 100%;
+    background-position-y: 15%;
+    background-repeat: no-repeat;
+    margin-left: 20%;
 }
 .next_phase p {
     text-align: center;
     margin-top: 5%;
+     font-size: 3vh;
 }
 .next_phase button{
-   margin-left: 39%;
+   margin-left: 47%;
+   width: 3vw;
+   height: 3vw;
+   background-image: url("./Imagenes/button.png");
+   background-size: cover;
+   border-radius: 3vw;
 }
 .player1{
     display: none;
     width: 40%;
-    height: 15%;
-    background-color: aquamarine;
+    height: 20%;
+    background-image: url("./Imagenes/pop.png");
+    background-size: 100%;
+    background-position-y: 15%;
+    background-repeat: no-repeat;
     margin-left: 30%;
 }
 .player1 p {
     text-align: center;
     margin-top: 5%;
+     font-size: 3vh;
 }
 .player1 button{
-   margin-left: 39%;
+    margin-left: 47%;
+    width: 3vw;
+    height: 3vw;
+    background-image: url("./Imagenes/button.png");
+    background-size: cover;
+    border-radius: 3vw;
 }
 .player2{
     display: none;
     width: 40%;
-    height: 15%;
-    background-color: aquamarine;
+    height: 20%;
+    background-image: url("./Imagenes/pop.png");
+    background-size: 100%;
+    background-position-y: 15%;
+    background-repeat: no-repeat;
     margin-left: 30%;
 }
 .player2 p {
     text-align: center;
     margin-top: 5%;
+     font-size: 3vh;
 }
 .player2 button{
-   margin-left: 39%;
+    margin-left: 47%;
+    width: 3vw;
+    height: 3vw;
+    background-image: url("./Imagenes/button.png");
+    background-size: cover;
+    border-radius: 3vw;
 }
 #control2{
     position: absolute;
@@ -158,4 +194,27 @@ body{
 #VS{
     background-image: url("./Imagenes/vs_button.png");
     background-size: cover;
+}
+.win{
+    display: none;
+    width: 100vh;
+    height: 100vh;
+    background-image: url("./Imagenes/pop.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-left: 23%;
+}
+.win p{
+    margin-left: 5vh;
+    text-align: center;
+    margin-top: 20vh;
+    font-size: 4vh;
+}
+.win button{
+    margin-left: 40%;
+    width: 8vw;
+    height: 8vw;
+    background-image: url("./Imagenes/button.png");
+    background-size: cover;
+    border-radius: 5vw;
 }

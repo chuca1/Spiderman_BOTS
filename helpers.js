@@ -123,7 +123,17 @@ function valorx(){
             telarañas.splice(i,1)
         } 
     }
-    if (tipo.life<=0){
+    if(venom_V.life<=0){
+        win.style.display="initial"
+        win.style.position="absolute"
+    }
+    if (spider.life<=0){
+        clearInterval(interval)
+        console.log("hola")
+        game_O.style.display="initial"
+        game_O.style.position="absolute"
+    }
+    else if (tipo.life<=0){
         explosiones.draw(tipo)
         gameOver()
         you_W.style.display="initial"
@@ -133,7 +143,26 @@ function valorx(){
     if(taki_taki<=60 && taki_taki>0){
         poder_malo.specialAttack()
         taki_taki-=1
-        if(spider.isTouching(poder_malo)){
+        if(tipo==venom_V){
+            if(spider.isTouching3(poder_malo)){
+                spider.life-=3
+                poder_malo=""
+                taki_taki=0
+            }
+            if(spider.isTouching4(poder_malo)){
+                spider.life-=3
+                poder_malo=""
+                taki_taki=0
+            }
+        }
+        if(tipo==kraven_V){
+            if(spider.isTouching2(poder_malo)){
+                spider.life-=3
+                poder_malo=""
+                taki_taki=0
+            }
+        }
+        else if(spider.isTouching(poder_malo)){
             spider.life-=3
             poder_malo=""
             taki_taki=0

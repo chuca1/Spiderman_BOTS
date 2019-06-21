@@ -185,12 +185,12 @@ venom_button.onclick=(e)=> {
     piumpium()
     vida.width=spider.life*10
     vida.draw()
-    
+    if (spider.life<=0){
+      clearInterval(interval)
+      console.log("hola")
+      game_O.style.display="initial"
+      game_O.style.position="absolute"
   }
-   if (spider.life<=0){
-    clearInterval(interval)
-    game_O.style.display="initial"
-    game_O.style.position="absolute"
   }
   function startGame() {
       

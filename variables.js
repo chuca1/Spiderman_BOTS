@@ -7,7 +7,7 @@ const central = new Central(edificios)
 const spider = new Spiderman(edificios)
 const bala = new Balas()
 const vuture_V= new Vulture(edificios)
-const explosiones= new Explosion(vuture_V)
+const explosiones= new Explosion()
 const vida= new LifeBar(spider)
 const electro_V = new Electro(edificios)
 const kraven_V = new Kraven(edificios)
@@ -37,6 +37,7 @@ const go2=document.querySelector("#go2")
 const vs=document.querySelector("#VS")
 const player1=document.querySelector(".player1")
 const player2=document.querySelector(".player2")
+const win=document.querySelector(".win")
 
 
 //setters for the villans

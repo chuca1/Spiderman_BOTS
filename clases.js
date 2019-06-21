@@ -116,6 +116,24 @@ class Spiderman{
                    this.y < balas.y + balas.height &&
                    this.y + this.height > balas.y
     }
+    isTouching2(balas){
+        return this.x < balas.x + balas.width &&
+               this.x + this.width > balas.x &&
+               this.y < balas.y1 + balas.height &&
+               this.y + this.height > balas.y1
+    }
+    isTouching3(balas){
+        return this.x < balas.x1 + balas.width &&
+               this.x + this.width > balas.x1 &&
+               this.y < balas.y + balas.height &&
+               this.y + this.height > balas.y
+    }
+    isTouching4(balas){
+        return this.x < balas.x2 + balas.width &&
+               this.x + this.width > balas.x2 &&
+               this.y < balas.y + balas.height &&
+               this.y + this.height > balas.y
+    }
 
 }
 class Spiderman2 extends Spiderman{
@@ -135,8 +153,8 @@ class Telaraña{
     constructor(spiderman){
         this.x=spiderman.x+4
         this.y=spiderman.y
-        this.width=10
-        this.height=10
+        this.width=20
+        this.height=20
         this.img= new Image()
         this.img.src="./Imagenes/tela.png"
     }
@@ -152,14 +170,16 @@ class Telaraña2{
     constructor(spiderman2){
         this.x=spiderman2.x+4
         this.y=spiderman2.y+spiderman2.height
-        this.width=30
-        this.height=30
+        this.width=20
+        this.height=20
+        this.img= new Image()
+        this.img.src="./Imagenes/tela2.png"
     }
     move(){
         this.y+=8
     }
     draw(){
-        context.fillRect(this.x,this.y,this.width,this.width)
+        context.drawImage(this.img,this.x,this.y,this.width,this.width)
         this.move()
     }
 }
@@ -233,20 +253,17 @@ class Obstacle {
     }
   }
   class Explosion{
-      constructor(villano){
-      this.x=villano.x
-      this.y=villano.height/2
-      this.width=100
-      this.height=100
+      constructor(){
+      this.x=canvas.width/2 - 100
+      this.y=20
+      this.width=200
+      this.height=200
       this.img = new Image()
-      this.villano=villano
-      this.img.src="./Imagenes/explosion.png"
+      this.img.src="./Imagenes/pom.png"
       }
       
       draw(){
           context.drawImage(this.img,this.x,this.y,this.height,this.width)
-          context.drawImage(this.img,this.x+this.villano.width,this.y,this.height,this.width)
-          context.drawImage(this.img,this.x+this.villano.width,this.y,this.height,this.width)
       }
   }
   class LifeBar{
@@ -339,8 +356,8 @@ class Poder_malo{
         }
         else if(tipo==kraven_V){
             this.x=0
-            this.y=300
-            this.y1=400
+            this.y=200
+            this.y1=300
             this.width=canvas.width
             this.height=30
             this.img=new Image()
