@@ -129,15 +129,19 @@ function valorx(){
     }
     if (spider.life<=0){
         clearInterval(interval)
-        console.log("hola")
         game_O.style.display="initial"
         game_O.style.position="absolute"
     }
     else if (tipo.life<=0){
         explosiones.draw(tipo)
         gameOver()
+        if(tipo==venom_V){
+            you_W.style.display="none"
+        }
+        else{
         you_W.style.display="initial"
         you_W.style.position="absolute"
+        }
         return true
     }
     if(taki_taki<=60 && taki_taki>0){

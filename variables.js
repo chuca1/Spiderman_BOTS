@@ -39,7 +39,7 @@ const vs=document.querySelector("#VS")
 const player1=document.querySelector(".player1")
 const player2=document.querySelector(".player2")
 const win=document.querySelector(".win")
-const winb=document.querySelector(".winb")
+const winb=document.querySelector("#winb")
 
 
 //setters for the villans

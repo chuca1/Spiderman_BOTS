@@ -144,7 +144,6 @@ go2.onclick=(e)=>{
     }
     menu_villanos.style.display="flex"
     canvas_C.style.display="none"
-    you_W.style.display="none"
     spider.life=30
     vuture_V.life=20
     electro_V.life=22
@@ -174,6 +173,7 @@ winb.onclick=(e)=>{
     menu_villanos.style.display="flex"
     canvas_C.style.display="none"
     win.style.display="none"
+    you_W.style.visibility="none"
     spider.life=30
     vuture_V.life=20
     electro_V.life=22
